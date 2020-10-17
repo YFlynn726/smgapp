@@ -29,7 +29,7 @@ const UploadForm = () => {
       setError(" ");
     } else {
       setFile(null);
-      setError("Please select an image file(ie png, jpeg, or pdf).");
+      setError("Please select an image file(png, jpeg, or pdf)");
     }
   };
 

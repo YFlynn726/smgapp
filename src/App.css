@@ -2,7 +2,7 @@
 body {
   font-family: "Rock Salt", cursive;
   color: var(--secondary);
-  background: rgb(199, 194, 194);
+  background: rgb(240, 231, 231);
 }
 .App {
   max-width: 960px;
@@ -32,14 +32,18 @@ p {
 
 .error-message {
   height: 60px;
-  font-size: 1.5rem;
-  padding-bottom: 10px;
+  font-size: 18px;
+  padding-top: 12px;
   color: #c90505;
+  font-family: "Roboto", sans-serif;
 }
 /* upload form styles */
 form {
   margin: 0px auto 10px;
   text-align: center;
+}
+i:hover {
+  color: rgb(206, 139, 139);
 }
 label input {
   height: 0;
@@ -100,6 +104,7 @@ h4 {
   margin-top: 0;
   letter-spacing: 2px;
   text-align: center;
+  color: rgb(206, 139, 139);
 }
 
 .back {

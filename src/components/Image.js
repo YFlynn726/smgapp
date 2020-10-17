@@ -6,6 +6,7 @@ const ImageGrid = ({ setSelectedImg }) => {
   //variable for images from firebase
   const { docs } = useFirestore("images");
   console.log(docs);
+
   //validating docs are there; if so mapping through and using data to render
   return (
     <div className="img-grid">
@@ -17,7 +18,7 @@ const ImageGrid = ({ setSelectedImg }) => {
             // invoking setSelectedImg and passing the url needed
             onClick={() => setSelectedImg(doc.url)}
           >
-            <a href={doc.url} target="_blank">
+            <a href={doc.url} target="_blank" rel="noopener noreferrer">
               <img src={doc.url} alt="uploaded pic" />
             </a>
           </div>

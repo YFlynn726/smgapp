@@ -19,7 +19,7 @@ const useFirestore = (collection) => {
         //cycling through documents
         snap.forEach((doc) => {
           //pushing that data object into the empty array
-          documents.push({ ...doc.data(), id: doc.id });
+          documents.push({ ...doc.data(), id: doc.id, shortUrl: doc.shortUrl });
         });
         //updating state with the doc
         setDocs(documents);

@@ -14,7 +14,6 @@ const useStorage = (file) => {
     //references
     //storing images
     const storageRef = projectStorage.ref(file.name);
-
     //accessing collection
     const collectionRef = projectFirestore.collection("images");
 
@@ -29,7 +28,7 @@ const useStorage = (file) => {
       (err) => {
         setError(err);
       },
-      //post request - updating url once downloaded and creating timestamp
+      //fetch request - updating url once downloaded and creating timestamp
       async () => {
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
