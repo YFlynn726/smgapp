@@ -15,12 +15,10 @@ const ImageGrid = ({ setSelectedImg }) => {
           <div
             className="img-wrap"
             key={doc.id}
-            // invoking setSelectedImg and passing the url needed
-            onClick={() => setSelectedImg(doc.url)}
+            onClick={() => setSelectedImg(doc.shortUrl)}
           >
-            <a href={doc.url} target="_blank" rel="noopener noreferrer">
-              <img src={doc.url} alt="uploaded pic" />
-            </a>
+            <img src={doc.shortUrl} alt="uploaded pic" />
+            <h4>hello</h4>{" "}
           </div>
         ))}
     </div>
