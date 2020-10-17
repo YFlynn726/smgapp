@@ -21,7 +21,6 @@ const UploadForm = () => {
   //function for onChange
   const changeHandler = (e) => {
     let selected = e.target.files[0];
-    console.log(selected);
     //validating file is selected, type, and size
     if (selected && types.includes(selected.type) && selected.size <= 1000000) {
       //updating state & error message
