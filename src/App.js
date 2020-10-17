@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Title from "./Title";
-import UploadForm from "./Uploadform";
+import Title from "./components/Title";
+import UploadForm from "./components/Uploadform";
 import Image from "./components/Image";
 
 function App() {

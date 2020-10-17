@@ -12,7 +12,6 @@ const useStorage = (file) => {
 
   useEffect(() => {
     //references
-
     //storing images
     const storageRef = projectStorage.ref(file.name);
 
@@ -23,13 +22,14 @@ const useStorage = (file) => {
     storageRef.put(file).on(
       "state_changed",
       (snap) => {
-        //figure out th eprogess upload
+        //figure out the progess upload
         let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
         setProgress(percentage);
       },
       (err) => {
         setError(err);
       },
+      //post request - updating url once downloaded and creating timestamp
       async () => {
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();

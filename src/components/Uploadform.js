@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import ProgressBar from "./components/ProgressBar";
+import ProgressBar from "./ProgressBar";
 
 const UploadForm = () => {
   //states - using hooks
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
 
-  //creating variable for allowed files to check file type
+  //creating variable for allowed files to check file type in validation
   const types = [
     "image/png",
     "image/jpeg",
@@ -22,8 +22,9 @@ const UploadForm = () => {
   const changeHandler = (e) => {
     let selected = e.target.files[0];
     console.log(selected);
+    //validating file is selected, type, and size
     if (selected && types.includes(selected.type) && selected.size <= 1000000) {
-      //updating state
+      //updating state & error message
       setFile(selected);
       setError(" ");
     } else {
