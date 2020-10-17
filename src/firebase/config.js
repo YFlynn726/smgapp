@@ -4,7 +4,7 @@ import "firebase/firestore";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyCNmTXtms4RqHsgKcdZe5gEnuDXQPXLYUY",
+  apiKey: process.env.apiKey,
   authDomain: "smp-app-48efa.firebaseapp.com",
   databaseURL: "https://smp-app-48efa.firebaseio.com",
   projectId: "smp-app-48efa",
