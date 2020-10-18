@@ -146,13 +146,12 @@ h4 {
 .shortUrl {
   padding: 10px;
   margin: auto;
-  letter-spacing: 2px;
   text-align: center;
   color: white;
   border: 2px solid white;
   background-color: rgb(153, 44, 62);
   font-family: "Roboto", sans-serif;
-  width: 30%;
+  width: 60%;
 }
 
 a {
